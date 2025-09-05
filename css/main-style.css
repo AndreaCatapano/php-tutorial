@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EDEDED;
+    overflow-x: hidden;
+    height: 100vh;
+    border: 1px solid #000;
+    font-family: "Funnel Display", sans-serif;
+    color: #1F1F1F;
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+
+.container {
+    padding: 0 2.5rem;
+}
+
+body.mobile-menu-open {
+    overflow: hidden;
+}
+
+body.mobile-menu-open main,
+body.mobile-menu-open footer {
+    display: none !important;
+}
+
+#hamburger-button:focus,
+#hamburger-button:active,
+#hamburger-button:hover {
+    background-color: transparent !important;
+    outline: none;
+}
+
+
+/* ================================
+   TYPOGRAPHY 
+   ================================ */
+h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 3.125rem;
+    font-weight: 400;
+}
+
+
+a {
+    text-decoration: none;
+    color: #1F1F1F;
+}
+
+nav a {
+    font-size: 1.5rem;
+}
+
+.page-title {
+    margin-top: 3.75rem;
+}
+
+/* ================================
+   COMPONENTS
+   ================================ */
+
+.home-button {
+    background-color: white;
+    padding: 10px 24px;
+    border-radius: 100px;
+    border: white;
+}
+
+.home-button a {
+    color: #1F1F1F;
+}
+
+/* ================================
+   HEADER
+   ================================ */
+
+header {
+    border-bottom: 1px solid #1F1F1F;
+    padding-left: 2.5rem;
+    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+#header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#header-title {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+#header-title a {
+    color: #1F1F1F;
+    padding: 1.3rem 1.3rem 1.3rem 0;
+}
+
+#header-link {
+    font-size: 2rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+#header-link a {
+    color: #000;
+    padding: 1.3rem;
+    border-left: 1px solid #1F1F1F;
+    transition: all ease-in 250ms;
+}
+
+#header-link a.active {
+    background-color: #1F1F1F;
+    color: white;
+}
+
+#header-link a:hover {
+    color: #1F1F1F;
+    background-color: white;
+}
+
+/* ================================
+   HAMBURGER BUTTON
+   ================================ */
+
+#hamburger-button {
+    display: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: calc(1.875rem + 2.6rem);
+    height: calc(1.875rem + 2.6rem);
+    align-items: center;
+    justify-content: center;
+}
+
+
+#hamburger-button img {
+    width: 24px;
+    height: 24px;
+    transition: filter 0.3s ease;
+}
+
+/* ================================
+   MENU MOBILE 
+   ================================ */
+
+.mobile-menu {
+    display: none;
+    height: 100vh;
+    background-color: #EDEDED;
+    flex-direction: column;
+    border-top: 1px #1F1F1F solid;
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+/* NAVIGATION LINKS - SI ESPANDONO */
+.mobile-menu-links {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #1F1F1F;
+    flex: 1;
+    max-height: 84px;
+}
+
+.mobile-menu-links a:hover {
+    background-color: white;
+    color: #1F1F1F;
+}
+
+/* SOCIAL - FISSI IN FONDO */
+.mobile-menu-social {
+    display: flex;
+    border: 1px solid #1F1F1F;
+    background-color: #EDEDED;
+    min-height: 84px;
+}
+
+.mobile-menu-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border-right: 1px solid #1F1F1F;
+    transition: all ease-in-out 300ms;
+    flex: 1;
+}
+
+.mobile-menu-social a:last-child {
+    border-right: none;
+}
+
+.mobile-menu-social a:hover {
+    background-color: #1F1F1F;
+}
+
+.mobile-menu-social a:hover img {
+    filter: invert(1);
+}
+
+.mobile-menu-social img {
+    width: 24px;
+    height: 24px;
+    transition: filter 0.3s ease;
+}
+
+/* ================================
+   CONTENT SECTIONS
+   ================================ */
+
+#home-jumbo {}
+
+#home-bio {
+    margin-top: 7.5rem;
+}
+
+#home-bio>div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8rem;
+}
+
+#bio-image-container img {
+    object-fit: cover;
+    max-width: 480px;
+    aspect-ratio: 3/2;
+}
+
+.bio-content {
+    flex: 1;
+    max-width: 546px;
+}
+
+.bio-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+    padding: 0 2.5rem 2rem;
+    margin-top: 5rem;
+}
+
+footer a {
+    color: #000;
+    text-decoration: underline;
+}
+
+footer h4 {
+    font-size: 1.5rem;
+}
+
+.footer-line {
+    border: none;
+    border-top: 1px solid #000;
+    margin: 0 0 2rem 0;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-legal {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.footer-legal a {
+    margin: 0 1rem;
+}
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+
+@media (max-width: 992px) {
+    #home-bio>div:first-child {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 807px) {
+    header {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #header-title {
+        width: calc(100% - 64px);
+        height: 64px;
+    }
+
+    #hamburger-button {
+        display: flex;
+        width: 64px;
+        height: 64px;
+        border-left: 1px solid #1F1F1F;
+    }
+
+    #header-link a {
+        display: none;
+    }
+
+    #header-title a {
+        padding: 1rem;
+        text-align: start;
+    }
+
+    #hamburger-button img {
+        width: 20px;
+        height: 20px;
+    }
+
+
+    .mobile-menu-social img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #hamburger-button img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .mobile-menu-social img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    h1 {
+        font-size: 7vw;
+    }
+}
+
+@media screen and (min-width: 808px) {
+    #hamburger-button {
+        display: none !important;
+    }
+
+    .mobile-menu {
+        display: none !important;
+    }
+}
