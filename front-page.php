@@ -1,4 +1,4 @@
-<!-- BLOG PAGE -->
+<!-- HOME PAGE -->
 
 <?php
 get_header();

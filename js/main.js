@@ -15,15 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Inizializza l'immagine del hamburger button
   img = hamburgerButton.querySelector("img");
 
-  // Gestione link header desktop
-  const links = document.querySelectorAll("#header-link a");
-  links.forEach((link) => {
-    link.addEventListener("click", function () {
-      links.forEach((l) => l.classList.remove("active"));
-      this.classList.add("active");
-    });
-  });
-
   // Gestione menu mobile
   hamburgerButton.addEventListener("click", function () {
     mobileMenu.classList.toggle("active");
@@ -46,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Gestione resize window
   window.addEventListener("resize", function () {
-    if (window.innerWidth > 768 && mobileMenu.classList.contains("active")) {
+    if (window.innerWidth > 808 && mobileMenu.classList.contains("active")) {
       mobileMenu.classList.remove("active");
       body.classList.remove("mobile-menu-open");
       isOpen = false;

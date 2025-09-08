@@ -1,31 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html <?php language_attributes(); ?>>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="<?php bloginfo('charset'); ?>"> 
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
         <header>
       <nav id="header-nav">
         <div id="header-title">
-          <a href="<?php echo site_url() ?>"><h1>SERENA TABACCHI</h1></a>
+          <a href="<?php echo site_url(); ?>"><h1>SERENA TABACCHI</h1></a>
         </div>
 
         <div id="header-link">
           <button id="hamburger-button">
             <img src="/wp-content/themes/test-andreacatapano/img/icon_menu.svg" alt="hamburger menu" />
           </button>
-          <a href="#">About</a>
-          <a href="#">Work</a>
-          <a href="#">Contact</a>
+        <?php
+        wp_nav_menu(array(
+            'theme_location' => 'headerMenuLocation'
+        ));
+        ?>
         </div>
       </nav>
 
       <div class="mobile-menu" id="mobile-menu">
         <div class="mobile-menu-links">
-          <a href="<?php echo site_url('about') ?>">About</a>
-          <a href="#">Work</a>
-          <a href="#">Contact</a>
+
+        <?php
+        wp_nav_menu(array(
+            'theme_location' => 'headerMenuLocation'
+        ));
+        ?>
         </div>
         <!--        <div class="mobile-menu-social">
           <a

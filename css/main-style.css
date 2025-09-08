@@ -15,7 +15,6 @@ body {
     font-weight: 400;
 }
 
-
 .container {
     padding: 0 2.5rem;
 }
@@ -36,7 +35,6 @@ body.mobile-menu-open footer {
     outline: none;
 }
 
-
 /* ================================
    TYPOGRAPHY 
    ================================ */
@@ -49,7 +47,6 @@ h2 {
     font-size: 3.125rem;
     font-weight: 400;
 }
-
 
 a {
     text-decoration: none;
@@ -118,19 +115,35 @@ header {
     text-transform: uppercase;
 }
 
-#header-link a {
-    color: #000;
+/* WordPress menu per DESKTOP */
+#header-link .menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#header-link .menu-item {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#header-link .menu-item a {
+    color: #1F1F1F;
     padding: 1.3rem;
     border-left: 1px solid #1F1F1F;
     transition: all ease-in 250ms;
 }
 
-#header-link a.active {
+#header-link .menu-item.current-menu-item a,
+#header-link .menu-item.current_page_item a,
+#header-link .menu-item.current-page-ancestor a {
     background-color: #1F1F1F;
     color: white;
 }
 
-#header-link a:hover {
+#header-link .menu-item a:hover {
     color: #1F1F1F;
     background-color: white;
 }
@@ -151,7 +164,6 @@ header {
     justify-content: center;
 }
 
-
 #hamburger-button img {
     width: 24px;
     height: 24px;
@@ -161,6 +173,10 @@ header {
 /* ================================
    MENU MOBILE 
    ================================ */
+
+li {
+    list-style: none;
+}
 
 .mobile-menu {
     display: none;
@@ -181,7 +197,25 @@ header {
     flex-direction: column;
 }
 
-.mobile-menu-links a {
+/* WordPress menu per MOBILE */
+.mobile-menu-links .menu {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mobile-menu-links .menu-item {
+    display: flex;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    max-height: 84px;
+}
+
+.mobile-menu-links .menu-item a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -189,10 +223,11 @@ header {
     font-size: 1.5rem;
     border-bottom: 1px solid #1F1F1F;
     flex: 1;
-    max-height: 84px;
+    width: 100%;
+    height: 100%;
 }
 
-.mobile-menu-links a:hover {
+.mobile-menu-links .menu-item a:hover {
     background-color: white;
     color: #1F1F1F;
 }
@@ -340,7 +375,7 @@ footer h4 {
         border-left: 1px solid #1F1F1F;
     }
 
-    #header-link a {
+    #header-link .menu-item a {
         display: none;
     }
 
@@ -353,7 +388,6 @@ footer h4 {
         width: 20px;
         height: 20px;
     }
-
 
     .mobile-menu-social img {
         width: 20px;
